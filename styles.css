@@ -1,7 +1,100 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap");
+
 html {
   box-sizing: border-box;
 }
 body {
   margin: 0;
   min-height: 100vh;
+  background-color: #fcf9ff;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='70' height='46' viewBox='0 0 70 46'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%230a0a0b' fill-opacity='0.09'%3E%3Cpolygon points='68 44 62 44 62 46 56 46 56 44 52 44 52 46 46 46 46 44 40 44 40 46 38 46 38 44 32 44 32 46 26 46 26 44 22 44 22 46 16 46 16 44 12 44 12 46 6 46 6 44 0 44 0 42 8 42 8 28 6 28 6 0 12 0 12 28 10 28 10 42 18 42 18 28 16 28 16 0 22 0 22 28 20 28 20 42 28 42 28 28 26 28 26 0 32 0 32 28 30 28 30 42 38 42 38 0 40 0 40 42 48 42 48 28 46 28 46 0 52 0 52 28 50 28 50 42 58 42 58 28 56 28 56 0 62 0 62 28 60 28 60 42 68 42 68 0 70 0 70 46 68 46'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  color: black;
+  font-family: Montserrat, sans-serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.quote-container {
+  width: auto;
+  max-width: 900px;
+  padding: 20px 30px;
+  border-radius: 10px;
+  background-color: rgb(255, 255, 255, 0.4);
+  box-shadow: 0 10px 10px 10px rgb(0, 0, 0, 0.2);
+}
+
+.quote-text {
+  font-size: 1.75rem;
+  font-weight: bold;
+}
+.long-quote {
+  font-size: 2rem;
+}
+.fa-quote-left {
+  font-size: 4rem;
+}
+.quote-author {
+  margin-top: 15px;
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+}
+.button-container {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  cursor: pointer;
+  font-size: 1.2rem;
+  height: 2.5rem;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background-color: #333;
+  outline: none;
+  padding: 0.5rem 1.8rem;
+  box-shadow: 0 0.3rem rgb(121, 121, 121, 0.65);
+}
+button:hover {
+  filter: brightness(150%);
+}
+button:active {
+  transform: translate(0, 0.3rem);
+  box-shadow: 0 0.1rem rgb(255, 255, 255, 0.65);
+}
+.twitter-button:hover {
+  color: #38a1f3;
+}
+.fa-twitter {
+  font-size: 1.5rem;
+}
+/* Loader */
+.loader {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #333;
+  border-radius: 50%;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Medy Query */
+@media screen and (max-width: 1000px) {
+  .quote-container {
+    margin: 0 10px;
+  }
+  .quote-text {
+    font-size: 1.5rem;
+  }
 }
